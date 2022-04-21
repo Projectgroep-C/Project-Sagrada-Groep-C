@@ -1,18 +1,40 @@
 package Sagrada.Controller;
 
+import Sagrada.Model.Player;
+
 public class DashboardController {
 
     private MyApp ma;
+     private Player p;
 
-    public DashboardController(MyApp ma) {
+    public DashboardController(MyApp ma, Player p) {
         this.ma = ma;
+        this.p = p;
 
-        this.switchScene();
+        // When done
+        // System.out.println("Done with DashboardScene");
+        // System.out.println("To GameScene!");
+        // ma.switchScene(2);
     }
 
-    private void switchScene() {
-        System.out.println("SwitchScene!");
-        ma.switchScene();
+    public void getGames() {
+
+    }
+
+    public void createGame() {
+
+    }
+
+    public void getChallenges() {
+
+    }
+
+    public void getAccounts() {
+
+    }
+
+    public void editChallenges(Boolean reaction) {
+
     }
 
 }
