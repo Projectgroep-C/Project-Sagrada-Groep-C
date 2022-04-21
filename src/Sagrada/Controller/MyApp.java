@@ -9,6 +9,6 @@ public class MyApp {
     }
 
     public void switchScene() {
-        System.out.println("SwitchScene!");
+
     }
 }
