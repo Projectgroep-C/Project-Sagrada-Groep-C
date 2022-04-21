@@ -66,6 +66,3 @@ JDK, JVM, Compiler & Versioncontrol Tool
 ·	Instanties camelCasing.
 
 ·	Commentaar en namen in het ENGELS.
-
-
-
