@@ -1,16 +1,14 @@
 package Sagrada.Controller;
 
-import javafx.application.Application;
-import javafx.stage.Stage;
+public class MyApp {
 
-public class MyApp extends Application {
+    private DashboardController dc;
 
-    @Override
-    public void start(Stage stage) throws Exception {
-
+    public MyApp() {
+        this.dc = new DashboardController(this);
     }
 
     public void switchScene() {
-
+        System.out.println("SwitchScene!");
     }
 }
