@@ -23,10 +23,10 @@ public class Main extends Application {
 
         stage.setTitle("Welcome to Sagrada!");
         stage.setScene(scene);
-        stage.sizeToScene();
+        stage.setFullScreen(true);
+        stage.setResizable(true);
         stage.show();
     }
-
 
 
 }

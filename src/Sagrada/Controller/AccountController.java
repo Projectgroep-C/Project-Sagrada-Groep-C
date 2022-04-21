@@ -1,5 +1,11 @@
 package Sagrada.Controller;
 
-public class AccountController {
 
+import javafx.scene.layout.Pane;
+
+public class AccountController extends Pane {
+
+    public AccountController() {
+        super(new Pane());
+    }
 }
