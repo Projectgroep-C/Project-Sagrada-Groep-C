@@ -17,7 +17,7 @@ public class Main extends Application {
 
     @Override
     public void start(Stage stage) throws Exception {
-        Text text = new Text(10, 40, "Hello World!");
+        Text text = new Text(10, 40, "Hello Sagrada!");
         text.setFont(new Font(40));
         Scene scene = new Scene(new Group(text));
 
