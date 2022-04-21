@@ -11,6 +11,7 @@ public class DashboardController {
     }
 
     private void switchScene() {
+        System.out.println("SwitchScene!");
         ma.switchScene();
     }
 
