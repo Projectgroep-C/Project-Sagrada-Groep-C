@@ -5,10 +5,12 @@ import javafx.scene.Scene;
 import javafx.scene.layout.Pane;
 
 import java.util.ArrayList;
-import java.util.Timer;
 import java.util.HashMap;
 
 public class GameScene extends Scene {
+
+    private final static int width = 1440;
+    private final static int height = 810;
 
     private int favorTokenAmount;
     private ArrayList<PatternCard> patterncardList = new ArrayList<PatternCard>();
@@ -16,15 +18,10 @@ public class GameScene extends Scene {
     private ArrayList<ToolCard> toolCardList = new ArrayList<ToolCard>();
     private ArrayList<PublicObjectiveCard> publicOjList = new ArrayList<PublicObjectiveCard>();
     private ArrayList<ChatLine> messageList = new ArrayList<ChatLine>();
-    private Timer timer;
-    private final static int width = 1440;
-    private final static int height = 810;
+
 
     public GameScene() {
         super(new Pane(), width, height);
-        Timer timer = new Timer();
-
-        System.out.println(timer);
     }
 
     public void startGame() {
