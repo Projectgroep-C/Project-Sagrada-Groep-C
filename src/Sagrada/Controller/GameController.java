@@ -1,18 +1,18 @@
 package Sagrada.Controller;
 
 import Sagrada.Model.Player;
-import Sagrada.Model.PlayerBoard;
+import Sagrada.Model.PlayerFrameField;
 
 public class GameController {
 
     private MyApp myApp;
     private Player player;
-    private PlayerBoard playerBoard;
+    private PlayerFrameField playerFrameField;
 
     public GameController(MyApp myApp, Player player) {
         this.myApp = myApp;
         this.player = player;
-        this.playerBoard = new PlayerBoard();
+        this.playerFrameField = new PlayerFrameField();
 
         // When done
         // System.out.println("Done with GameScene");

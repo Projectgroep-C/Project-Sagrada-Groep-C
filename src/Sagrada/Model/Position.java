@@ -1,5 +1,7 @@
 package Sagrada.Model;
 
-public class PlayerBoard {
+public class Position {
+
+
 
 }
