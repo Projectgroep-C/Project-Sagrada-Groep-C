@@ -1,32 +1,10 @@
 package Sagrada.Controller;
 
-import Sagrada.View.AccountScene;
-import Sagrada.View.GameScene;
-import javafx.application.Application;
-import javafx.scene.text.Font;
-import javafx.scene.text.Text;
-import javafx.stage.Stage;
-
-public class Main extends Application {
+public class Main {
 
     public static void main(String[] args) throws Exception {
-        Application.launch(args);
         MyApp myApp = new MyApp();
+        myApp.main(args);
     }
-
-    @Override
-    public void start(Stage stage) throws Exception {
-        Text text = new Text(10, 40, "Hello Sagrada!");
-        text.setFont(new Font(40));
-        AccountScene accountScene = new AccountScene();
-        GameScene gamescene = new GameScene();
-
-        stage.setTitle("Welcome to Sagrada!");
-        stage.setScene(gamescene);
-        stage.setFullScreen(false);
-        stage.setResizable(true);
-        stage.show();
-    }
-
 
 }
