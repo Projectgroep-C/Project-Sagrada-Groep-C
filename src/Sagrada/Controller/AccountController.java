@@ -1,11 +1,8 @@
 package Sagrada.Controller;
 
+public class AccountController {
 
-import javafx.scene.layout.Pane;
+    public void registerAccount(String username, String password) {
 
-public class AccountController extends Pane {
-
-    public AccountController() {
-        super(new Pane());
     }
 }

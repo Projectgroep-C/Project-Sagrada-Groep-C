@@ -5,13 +5,13 @@ import Sagrada.Model.PlayerBoard;
 
 public class GameController {
 
-    private MyApp ma;
-    private Player p;
+    private MyApp myApp;
+    private Player player;
     private PlayerBoard playerBoard;
 
-    public GameController(MyApp ma, Player p) {
-        this.ma = ma;
-        this.p = p;
+    public GameController(MyApp myApp, Player player) {
+        this.myApp = myApp;
+        this.player = player;
         this.playerBoard = new PlayerBoard();
 
         // When done

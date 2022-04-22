@@ -4,12 +4,12 @@ import Sagrada.Model.Player;
 
 public class DashboardController {
 
-    private MyApp ma;
-     private Player p;
+    private MyApp myApp;
+    private Player player;
 
-    public DashboardController(MyApp ma, Player p) {
-        this.ma = ma;
-        this.p = p;
+    public DashboardController(MyApp myApp, Player player) {
+        this.myApp = myApp;
+        this.player = player;
 
         // When done
         // System.out.println("Done with DashboardScene");
