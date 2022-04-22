@@ -8,6 +8,7 @@
 +	Hou communicatie met elkaar.
 
 +	Laat je niks van je horen? Dan proberen andere groepsgenoten contact op te nemen met de gene. Doet de persoon in kwestie nog steeds niks en/of communiceert hij/zij niet, dan wordt de projectdocent er bij gehaald en een eventuele gele/rode kaart.
++	Lever kwaliteit op dat we verwachten van iemand die in Blok 4 Informatica zit. Lever je slap en slechte code op? De eerste keer zullen de andere groepsgenoten het melden. Als het nog een keer gebeurd overleggen we het met de projectdocent.
 
 ### Meetings
 
@@ -69,6 +70,8 @@
 +	Versioncontrol Tool: Github Desktop (Version 2.9.14)
 
 ### Coding conventions
+
++ Schermgrootte van het project is 1440x810
 
 +	Klassen, Methodes en Constanten PascalCasing.
 
