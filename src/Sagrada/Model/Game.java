@@ -2,7 +2,6 @@ package Sagrada.Model;
 
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
-import java.sql.Statement;
 import java.sql.Timestamp;
 import java.util.ArrayList;
 import java.util.Date;
@@ -22,7 +21,7 @@ public class Game extends Database {
         this.idGame = idGame;
         this.turnIdPlayer = turnIdPlayer;
         this.currentRoundID = currentRoundID;
-        this.created = new Date().toString();
+        this.created = created;
     }
 
     public int getIdGame() {
@@ -53,17 +52,19 @@ public class Game extends Database {
         return created;
     }
 
-    public static ArrayList<Game> GetPlayerGames(int playerId) {
+    public static ArrayList<Game> GetPlayerGames(String username) {
 
         ArrayList<Game> games = new ArrayList<>();
 
         try {
 
-            Statement stmt = con.createStatement();
-            String query = "select * from game where " + playerId;
-            ResultSet rs = stmt.executeQuery(query);
+            PreparedStatement ps = con.prepareStatement("select * from game inner join player on game.idgame = player.idgame where player.username = ?");
+            ps.setString(1, username);
+            ResultSet rs = ps.executeQuery();
 
             while(rs.next()) games.add( new Game( rs.getInt(1), rs.getInt(2), rs.getInt(3), rs.getString(4) ) );
+
+            ps.close();
 
         }
         catch(Exception e){
@@ -77,9 +78,10 @@ public class Game extends Database {
         try {
 
             // Add to main for testing
-//            if (Game.CreateGame()) System.out.println("Game gemaakt!");
-//            else System.out.println("Game niet gemaakt!");
+            //if (Game.CreateGame()) System.out.println("Game gemaakt!");
+            //else System.out.println("Game niet gemaakt!");
             // Doesn't work yet.
+
             Game newGame = new Game();
             System.out.println(newGame.getCreated());
 
