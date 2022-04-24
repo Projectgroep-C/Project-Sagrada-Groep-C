@@ -15,9 +15,8 @@ public class DashboardController {
         this.myApp = myApp;
         this.player = new Player();
 
-        Player player = new Player();
-        player.GetPlayer(1);
-        this.player = player;
+
+        this.player = Player.GetPlayer(1);
 
         System.out.println(this.player.getUsername());
 
@@ -26,17 +25,16 @@ public class DashboardController {
 
     public void getGames() {
 
-        Game game = new Game();
-        games = game.GetPlayerGames(player.getId());
+        this.games = Game.GetPlayerGames(player.getId());
 
-        for (Game g : games) {
+        for (Game g : this.games) {
             System.out.println(g.getCreated());
         }
 
     }
 
     public void createGame() {
-
+        Game newGame = new Game();
     }
 
     public void getChallenges() {

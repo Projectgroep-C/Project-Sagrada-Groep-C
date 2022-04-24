@@ -91,28 +91,19 @@ public class Player extends Database {
         this.score = score;
     }
 
-    public boolean GetPlayer(int playerId) {
+    public static Player GetPlayer(int playerId) {
         try {
 
-            Statement stmt = this.con.createStatement();
+            Statement stmt = con.createStatement();
             String query = "select * from player where " + playerId;
             ResultSet rs = stmt.executeQuery(query);
-
-            while(rs.next()) {
-                this.setId(rs.getInt(1));
-                this.setUsername(rs.getString(2));
-                this.setGame(rs.getInt(3));
-                this.setPlayStatus(PlayStatus.valueOf(rs.getString(4)));
-                this.setSeqNr(rs.getInt(5));
-                this.setPrivate_objective_color(rs.getString(6));
-                this.setIdPatternCard(rs.getInt(7));
-                this.setScore(rs.getInt(8));
-            }
+            
+            return new Player(rs.getInt(1), rs.getString(2), rs.getInt(3), PlayStatus.valueOf(rs.getString(4)), rs.getInt(5), rs.getString(6), rs.getInt(7), rs.getInt(8));
         }
         catch(Exception e){
             System.out.println(e);
         }
 
-        return false;
+        return null;
     }
 }

@@ -1,13 +1,11 @@
 package Sagrada.Controller;
 
-import Sagrada.Model.Player;
-
 public class MyApp {
 
     private DashboardController dashboardController;
 
     public MyApp() {
-        this.dashboardController = new DashboardController(this, new Player());
+        this.dashboardController = new DashboardController(this);
     }
 
     public String switchScene(int selectedScene) {
