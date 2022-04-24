@@ -1,6 +1,14 @@
 package Sagrada.View;
 
-public class DashboardScene {
+import javafx.scene.Scene;
+import javafx.scene.layout.Pane;
+
+public class DashboardScene extends Scene {
+
+    public DashboardScene(Pane pane) {
+        super(pane, 1440, 810);
+
+    }
 
     public void showGames() {
 

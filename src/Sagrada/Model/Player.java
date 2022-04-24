@@ -97,7 +97,7 @@ public class Player extends Database {
             Statement stmt = con.createStatement();
             String query = "select * from player where " + playerId;
             ResultSet rs = stmt.executeQuery(query);
-            
+
             return new Player(rs.getInt(1), rs.getString(2), rs.getInt(3), PlayStatus.valueOf(rs.getString(4)), rs.getInt(5), rs.getString(6), rs.getInt(7), rs.getInt(8));
         }
         catch(Exception e){
