@@ -1,15 +1,18 @@
 package Sagrada.View;
 
+import Sagrada.Controller.MyApp;
 import javafx.scene.Scene;
 import javafx.scene.layout.Pane;
 
 public class AccountScene extends Scene {
 
-    private final static int width = 800;
-    private final static int height = 500;
+    private LoginPane loginPane;
 
-    public AccountScene(Pane pane) {
-        super(pane, width, height);
+    public AccountScene() {
+        super(new Pane(), MyApp.width, MyApp.height);
+        this.loginPane = new LoginPane();
+        setRoot(this.loginPane);
+
     }
     public void createAccount(String username, String password) {
 

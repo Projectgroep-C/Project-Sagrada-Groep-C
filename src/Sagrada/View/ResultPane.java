@@ -1,5 +1,6 @@
 package Sagrada.View;
 
+import Sagrada.Controller.MyApp;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
 import javafx.scene.control.Button;
@@ -13,19 +14,16 @@ import java.util.HashMap;
 public class ResultPane extends StackPane {
 
     //instance variables
-    private final static int width = 1440;
-    private final static int height = 810;
     private Background background = new Background(new BackgroundFill(Color.rgb(198, 0, 42), null, null));
     private Pane informationPane;
     private VBox vBox;
     private HashMap<Integer, Integer> mapTest = new HashMap<Integer, Integer>();
     private Button button;
-    private DashboardScene dashboardScene = new DashboardScene();
 
     public ResultPane() {
         super();
-        button = new Button("Return to dashboard!");
-        button.setOnAction(e -> returnToDashboard(dashboardScene));
+        button = new Button("Return to GameScene!");
+        button.setOnAction(e -> MyApp.switchScene(2));
         button.setFont(new Font(20));
         button.setWrapText(true);
 
@@ -51,12 +49,8 @@ public class ResultPane extends StackPane {
         setAlignment(vBox, Pos.CENTER);
         getChildren().add(informationPane);
         setPadding(new Insets(100));
-        setPrefSize(width, height);
+        setPrefSize(MyApp.width, MyApp.height);
         setBackground(background);
-    }
-
-    public void returnToDashboard(DashboardScene dashboardScene) {
-        //In MyApp wordt de DashboardScene gewisselt met de GameOverScene
     }
 
     public int testenHashMap() {
@@ -80,7 +74,7 @@ public class ResultPane extends StackPane {
     }
 
     private void sortOutRankings() {
-        
+
     }
 
 

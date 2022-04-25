@@ -1,16 +1,16 @@
 package Sagrada.View;
 
+import Sagrada.Controller.MyApp;
 import Sagrada.Model.*;
 import javafx.scene.Scene;
+import javafx.scene.control.Button;
 import javafx.scene.layout.Pane;
+import javafx.scene.text.Text;
 
 import java.util.ArrayList;
 import java.util.HashMap;
 
 public class GameScene extends Scene {
-
-    private final static int width = 1440;
-    private final static int height = 810;
 
     private int favorTokenAmount;
     private ArrayList<PatternCard> patterncardList = new ArrayList<PatternCard>();
@@ -19,9 +19,26 @@ public class GameScene extends Scene {
     private ArrayList<PublicObjectiveCard> publicOjList = new ArrayList<PublicObjectiveCard>();
     private ArrayList<ChatLine> messageList = new ArrayList<ChatLine>();
 
+    private PlayerBoardPane playerBoardPane;
 
     public GameScene() {
-        super(new Pane(), width, height);
+        super(new Pane(), MyApp.width, MyApp.height);
+        this.playerBoardPane = new PlayerBoardPane();
+        setRoot(this.playerBoardPane);
+
+        Text text = new Text("Hello, you're on the GameScene");
+        Button next = new Button("Go to GameOverScene");
+        next.setOnAction(e -> MyApp.switchScene(3));
+        next.setLayoutX(250);
+        next.setLayoutY(220);
+
+        Button goback = new Button("Go back to DashboardScene");
+        goback.setOnAction(e -> MyApp.switchScene(1));
+
+        Pane pane = new Pane();
+        pane.getChildren().add(text);
+        pane.getChildren().add(next);
+        pane.getChildren().add(goback);
     }
 
     public void startGame() {
