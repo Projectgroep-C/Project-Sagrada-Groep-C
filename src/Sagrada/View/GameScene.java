@@ -1,14 +1,27 @@
 package Sagrada.View;
 
-import java.util.Timer;
+import Sagrada.Model.*;
+import javafx.scene.Scene;
+import javafx.scene.layout.Pane;
 
-public class GameScene {
+import java.util.ArrayList;
+import java.util.HashMap;
+
+public class GameScene extends Scene {
+
+    private final static int width = 1440;
+    private final static int height = 810;
 
     private int favorTokenAmount;
-    private Timer timer;
+    private ArrayList<PatternCard> patterncardList = new ArrayList<PatternCard>();
+    private HashMap<Player, Account> playerDetails = new HashMap<Player, Account>();
+    private ArrayList<ToolCard> toolCardList = new ArrayList<ToolCard>();
+    private ArrayList<PublicObjectiveCard> publicOjList = new ArrayList<PublicObjectiveCard>();
+    private ArrayList<ChatLine> messageList = new ArrayList<ChatLine>();
+
 
     public GameScene() {
-
+        super(new Pane(), width, height);
     }
 
     public void startGame() {

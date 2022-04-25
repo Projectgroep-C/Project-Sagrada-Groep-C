@@ -1,68 +1,80 @@
-# Project-Sagrada-Groep-C
-Samenwerkingsafspraken Groep C
+# Samenwerkingsafspraken Groep C
 
-# Generale afspraken
-·	Normaal met elkaar om gaan.
 
-·	Hou communicatie met elkaar.
+### Generale afspraken
 
-·	Laat je niks van je horen? Dan proberen andere groepsgenoten contact op te nemen met de gene. Doet de persoon in kwestie nog steeds niks en/of communiceert hij/zij niet, dan wordt de projectdocent er bij gehaald en een eventuele gele/rode kaart.
-Meetings
++	Normaal met elkaar om gaan.
 
-·	Half uur voor de eerst les van de week. Stand-up meeting in Xplora.
++	Hou communicatie met elkaar.
 
-·	Tijdens de stand-up wordt bepaalt welke dag we 3 uur bij elkaar in de Xplora gaan zitten.
++	Laat je niks van je horen? Dan proberen andere groepsgenoten contact op te nemen met de gene. Doet de persoon in kwestie nog steeds niks en/of communiceert hij/zij niet, dan wordt de projectdocent er bij gehaald en een eventuele gele/rode kaart.
++	Lever kwaliteit op dat we verwachten van iemand die in Blok 4 Informatica zit. Lever je slap en slechte code op? De eerste keer zullen de andere groepsgenoten het melden. Als het nog een keer gebeurd overleggen we het met de projectdocent.
 
-# Deadlines
-·	Wat je zegt dat je gaat doen tijdens de stand-up. Moet dan ook af.
+### Meetings
 
-·	1x vergeten is groepswaarschuwing, 2x vergeten is melden projectdocent.
++	Half uur voor de eerst les van de week. Stand-up meeting in Xplora.
 
-·	Altijd aangeven als het niet lukt. Niet aangeven telt vergeten.
++	Tijdens de stand-up wordt bepaalt welke dag we 3 uur bij elkaar in de Xplora gaan zitten.
 
-·	Bij kleine problemen die iemand makkelijk kan overnemen of helpen wordt gelijk gedaan.
+### Deadlines
 
-·	Bij een groot probleem, wordt er een meeting opgesteld.
++	Wat je zegt dat je gaat doen tijdens de stand-up. Moet dan ook af.
 
-·	Ongeoorloofd bij een meeting? Eerste keer waarschuwing, daarna melden projectdocent. 
++	1x vergeten is groepswaarschuwing, 2x vergeten is melden projectdocent.
 
-# Git afspraken
-·	Commits zijn in het Nederlands.
++	Altijd aangeven als het niet lukt. Niet aangeven telt vergeten.
 
-·	Schrijf nuttige commits (link commit aan ticket Jira).
++	Bij kleine problemen die iemand makkelijk kan overnemen of helpen wordt gelijk gedaan.
 
-·	Visio branche structuur
++	Bij een groot probleem, wordt er een meeting opgesteld.
 
-·	Eerst aangeven voordat je merged feature branche -> Development. Iedereen moet toestemming geven via WhatsApp. Er moet mininaal een andere groepsgenoot er bij zijn ter controle.
++	Ongeoorloofd bij een meeting? Eerste keer waarschuwing, daarna melden projectdocent.
+### Git afspraken
 
-·	De merge van Development -> Main wordt met z’n alle gedaan.  
++	Commits zijn in het Nederlands.
 
-·	Elke zaterdag maakt Guus een back-up van de Repo.
-Versiecontrole
++	Schrijf nuttige commits (link commit aan ticket Trello).
 
-·	Versie getal Main branche is getal van de week waar we in zitten “V<weeknummer>.<hot fixes>: <beschrijving>” (De meivakantie wordt niet meegenomen).
++	Eerst aangeven voordat je merged feature branche -> Development. Iedereen moet toestemming geven via WhatsApp. Er moet minimaal een andere groepsgenoot er bij zijn ter controle.
++	De merge van Development -> Main wordt met z’n alle gedaan.
 
-·	Nieuwe merge Feature -> Development “V<weeknummer>.x: <beschrijving>” .
++	Elke zaterdag maakt Guus een back-up van de Repo. 
++ Branche structuur gaat als volgt:
+![Branche structure](https://i.postimg.cc/mDFXQ4zS/Afbeelding1.jpg "Branche structure")
 
-·	Nieuwe commit Feature branche “sgr-<ticketnummer>.<commit nummer>: <beschrijving>”.
+ 
+### Versiecontrole
 
-# IDE’s
-·	Eclipse IDE 2021-06
++	Versie getal Main branche is getal van de week waar we in zitten
 
-·	Intellij IDEA 2022.1
-JDK, JVM, Compiler & Versioncontrol Tool 
+`“W<weeknummer>.<hot fixes>: <beschrijving>”` (De meivakantie wordt niet meegenomen).
++	Nieuwe merge Feature -> Development `“V<weeknummer>.x: <beschrijving>”` .
 
-·	JDK: jdk1.8.0_202
++	Nieuwe commit Feature branche `“sgr-<ticketnummer>.<commit nummer>: <beschrijving> ”`.
 
-·	JVM: OpenJDK 64-Bit Server VM by Oracle Corporation
+### IDE's
 
-·	Compiler: 1.8
 
-·	Versioncontrol Tool: Github Desktop (Version 2.9.14)
++	Eclipse IDE 2021-06
 
-# Coding conventions
-· Klassen, Methodes en Constanten PascalCasing. 
++	Intellij IDEA 2022.1
 
-·	Instanties camelCasing.
+### JDK, JVM, Compiler & Versioncontrol Tool
 
-·	Commentaar en namen in het ENGELS.
++	JDK: jdk1.8.0_202
+
++	JVM: OpenJDK 64-Bit Server VM by Oracle Corporation
+
++	Compiler: 1.8
+
++	Versioncontrol Tool: Github Desktop (Version 2.9.14)
+
+### Coding conventions
+
++ Schermgrootte van het project is 1440x810
+
++	Klassen, Methodes en Constanten PascalCasing.
+
++	Instanties camelCasing.
+
++	Commentaar en namen in het ENGELS.
