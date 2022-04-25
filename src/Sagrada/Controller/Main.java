@@ -1,7 +1,8 @@
 package Sagrada.Controller;
 
-import Sagrada.View.AccountScene;
 import javafx.application.Application;
+import javafx.scene.Group;
+import javafx.scene.Scene;
 import javafx.scene.text.Font;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
@@ -10,21 +11,22 @@ public class Main extends Application {
 
     public static void main(String[] args) throws Exception {
         Application.launch(args);
-        MyApp myApp = new MyApp();
+
+        MyApp ma = new MyApp();
     }
 
     @Override
     public void start(Stage stage) throws Exception {
-        Text text = new Text(10, 40, "Hello Sagrada!");
+        Text text = new Text(10, 40, "Hello World!");
         text.setFont(new Font(40));
-        AccountScene accountScene = new AccountScene();
+        Scene scene = new Scene(new Group(text));
 
         stage.setTitle("Welcome to Sagrada!");
-        stage.setScene(accountScene);
-        stage.setFullScreen(false);
-        stage.setResizable(true);
+        stage.setScene(scene);
+        stage.sizeToScene();
         stage.show();
     }
+
 
 
 }
