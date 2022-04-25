@@ -1,13 +1,23 @@
 package Sagrada.View;
 
-import java.util.HashMap;
+import javafx.scene.Scene;
+import javafx.scene.layout.Pane;
 
-public class GameOverScene {
+public class GameOverScene extends Scene {
 
-    private HashMap<Integer, Integer> playerScores;
+    //instance variables
+    private ResultPane resultPane;
 
-    public void GameOverScene(HashMap<Integer, Integer> finalScore) {
+    public GameOverScene() {
+        super(new Pane());
+        resultPane = new ResultPane();
+        receivePlayerScore();
+        setRoot(resultPane);
+    }
 
+    public void receivePlayerScore() {
+        //test
+        System.out.println(resultPane.testenHashMap());
     }
 
 }
