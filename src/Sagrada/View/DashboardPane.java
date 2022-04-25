@@ -3,29 +3,42 @@ package Sagrada.View;
 import Sagrada.Controller.MyApp;
 import javafx.geometry.Insets;
 import javafx.scene.control.Button;
-import javafx.scene.layout.StackPane;
+import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.VBox;
-import javafx.scene.text.Text;
+import javafx.scene.text.Font;
 
-public class DashboardPane extends StackPane {
+public class DashboardPane extends BorderPane {
 
-    private VBox vBox;
+    private VBox nav;
+    private DashboardScene dashboard;
 
-    public DashboardPane() {
+    public DashboardPane(DashboardScene dashboard) {
         super();
-
-        Text text = new Text("Hello, you're on the DashboardScene");
-        Button next = new Button("Go to GameScene");
-        next.setOnAction(e -> MyApp.switchScene(2));
-
-        Button goback = new Button("Go back to AccountScene");
-        goback.setOnAction(e -> MyApp.switchScene(0));
-
-        vBox = new VBox(text, next, goback);
-        vBox.setPadding(new Insets(15));
-        vBox.setSpacing(50);
-
-        getChildren().add(vBox);
+        this.dashboard = dashboard;
+        SetNav();
     }
+
+    private void SetNav(){
+        nav = new VBox();
+        nav.setPadding(new Insets(100));
+        nav.setSpacing(50);
+        nav.getChildren().addAll(
+                SetNavItem("Players", 1),
+                SetNavItem("Games",2),
+                SetNavItem("Ranks",3),
+                SetNavItem("Challanges",4)
+        );
+        setCenter(nav);
+    }
+
+    private Button SetNavItem(String name, int paneIndex){
+        Button btn = new Button(name);
+        btn.setMinWidth(400);
+        Font font = Font.font("Arial", 36);
+        btn.setFont(font);
+        btn.setOnAction(e -> dashboard.SwitchPane(paneIndex));
+        return btn;
+    }
+
 
 }

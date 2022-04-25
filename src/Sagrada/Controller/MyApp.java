@@ -18,7 +18,7 @@ public class MyApp extends Application {
     protected static Stage stage;
 
     public MyApp() {
-        this.dashboardController = new DashboardController(this);
+        //this.dashboardController = new DashboardController(this);
     }
 
     public void main(String[] args) throws Exception {
