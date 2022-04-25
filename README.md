@@ -1,6 +1,13 @@
 # Samenwerkingsafspraken Groep C
 
 
+### Student info
+
++ Lars Brands - 2182024
++ Vincent van Hintum - 2189326
++ Bastiaan Braun - 2185668
++ Guus van Laarhoven - 2186117
+
 ### Generale afspraken
 
 +	Normaal met elkaar om gaan.
