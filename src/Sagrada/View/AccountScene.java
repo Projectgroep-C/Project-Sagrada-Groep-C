@@ -4,13 +4,16 @@ import Sagrada.Controller.AccountController;
 import Sagrada.Controller.MyApp;
 import com.sun.org.apache.xpath.internal.operations.Bool;
 import javafx.scene.Scene;
-import javafx.scene.layout.BorderPane;
-import javafx.scene.layout.Pane;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
+import javafx.scene.layout.*;
 
 import java.io.FileNotFoundException;
 import java.util.ArrayList;
 
 public class AccountScene extends Scene {
+    private static final String imageUrl = "/images/bgLogin.jpg";
+
 
     private BorderPane root;
     private ArrayList<Pane> panes;
@@ -21,8 +24,15 @@ public class AccountScene extends Scene {
         root = new BorderPane();
         setRoot(root);
         setPanes();
-
+        showBackgroundImage();
         root.setCenter(panes.get(0));
+    }
+
+    private void showBackgroundImage() {
+        BackgroundSize cover = new BackgroundSize(1, 1, false, false, false, true);
+        Image image = new Image(getClass().getResource(imageUrl).toString());
+        Background background = new Background(new BackgroundImage(image, BackgroundRepeat.NO_REPEAT, BackgroundRepeat.NO_REPEAT, BackgroundPosition.CENTER, cover));
+        root.setBackground(background);
     }
 
     private void setPanes() {
