@@ -1,0 +1,28 @@
+/* Here comes the general styling of the Account section */
+.accountSceneButton{
+    -fx-background-color: #ff9900; /* Violet */
+    -fx-text-fill: #ffffff;
+    -fx-border-width:4;
+    -fx-background-radius: 10;
+    -fx-border-radius: 10;
+    -fx-padding: 10px 22px;
+    -fx-text-align: center;
+    -fx-text-decoration: none;
+    -fx-display: inline-block;
+    -fx-font-size: 16px;
+}
+
+.accountTextField{
+    -fx-width: 100%;
+    -fx-padding: 12px 20px;
+    -fx-margin: 8px 0;
+    -fx-box-sizing: border-box;
+}
+
+.accountPaneStyle{
+    -fx-background-radius: 30;
+    -fx-border-radius: 30;
+    -fx-border-width:4;
+    -fx-background-color: #b6b6b6;
+    -fx-border-color: #ff9900;
+}

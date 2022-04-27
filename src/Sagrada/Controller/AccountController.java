@@ -6,11 +6,11 @@ public class AccountController {
 
     private Account account;
 
-    public void registerAccount(String username, String password) {
+    public void RegisterAccount(String username, String password) {
 
     }
 
-    public boolean loginAccount(String username, String password){
+    public boolean LoginAccount(String username, String password){
         /*this.account = new Account();
         this.account = Account.getAccount(username);
         if (this.account.getPassword() == password){

@@ -1,0 +1,5 @@
+/* Here comes the general styling of the application */
+
+.generalTextStyle{
+    -fx-font: arial;
+}
