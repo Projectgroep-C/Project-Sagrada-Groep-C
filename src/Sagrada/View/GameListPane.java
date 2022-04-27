@@ -1,6 +1,8 @@
 package Sagrada.View;
 
-public class GameListPane {
+import javafx.scene.layout.Pane;
+
+public class GameListPane extends Pane {
 
     public void sort(String sortBy) {
 
