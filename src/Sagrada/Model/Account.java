@@ -19,6 +19,11 @@ public class Account extends Database {
     public String getUsername() {
         return username;
     }
+    //TODO Delete
+    //Function for testing purposes will delete later
+    public void TestSetUsername(String username) {
+        this.username = username;
+    }
 
     public String getPassword() {
         return password;

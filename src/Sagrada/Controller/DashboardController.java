@@ -7,12 +7,12 @@ import java.util.ArrayList;
 
 public class DashboardController {
 
-    private MyApp myApp;
+   // private MyApp myApp;
     private Player player;
     private ArrayList<Game> games;
 
-    public DashboardController(MyApp myApp) {
-        this.myApp = myApp;
+    public DashboardController() {
+        //this.myApp = myApp;
         this.player = new Player();
 
         this.player = Player.GetPlayer(1);

@@ -1,6 +1,8 @@
 package Sagrada.View;
 
+import Sagrada.Controller.DashboardController;
 import Sagrada.Controller.MyApp;
+import Sagrada.Model.Account;
 import Sagrada.Model.Player;
 import javafx.geometry.Insets;
 import javafx.scene.Scene;
@@ -58,19 +60,20 @@ public class DashboardScene extends Scene {
         return title;
     }
 
-    public ArrayList<Player> getGames() {
-        ArrayList<Player> players = new ArrayList<Player>();
+    public ArrayList<Account> getAcounts(ArrayList<Account> accounts) {
+        //ArrayList<Player> players = new ArrayList<Player>();
 
         //todo delete
-        Player p1 = new Player();
-        p1.setUsername("Punpun");
-        players.add(p1);
-        Player p2 = new Player();
-        p2.setUsername("Aiko");
-        players.add(p2);
+        Account p1 = new Account();
+        p1.TestSetUsername("Punpun");
+        accounts.add(p1);
+        Account p2 = new Account();
+        p2.TestSetUsername("Aiko");
+        accounts.add(p2);
         //todo delete
+        //players = new ArrayList<Player>();
 
-        return players;
+        return accounts;
     }
 
     public void openGame() {

@@ -18,7 +18,7 @@ public class MyApp extends Application {
     protected static Stage stage;
 
     public MyApp() {
-        //this.dashboardController = new DashboardController(this);
+        //this.dashboardController = new DashboardController();
     }
 
     public void main(String[] args) throws Exception {
@@ -43,20 +43,16 @@ public class MyApp extends Application {
         //Temporarily return of String, actual code will come.
         switch (selectedScene) {
             case 0:
-                AccountScene accountScene = new AccountScene();
-                stage.setScene(accountScene);
+                stage.setScene(new AccountScene());
                 break;
             case 1:
-                DashboardScene dashboardScene = new DashboardScene();
-                stage.setScene(dashboardScene);
+                stage.setScene(new DashboardScene());
                 break;
             case 2:
-                GameScene gameScene = new GameScene();
-                stage.setScene(gameScene);
+                stage.setScene(new GameScene());
                 break;
             case 3:
-                GameOverScene gameOverScene = new GameOverScene();
-                stage.setScene(gameOverScene);
+                stage.setScene(new GameOverScene());
                 break;
             default: System.out.println("ERROR");
         };
