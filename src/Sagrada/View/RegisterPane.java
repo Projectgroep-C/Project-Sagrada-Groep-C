@@ -9,19 +9,24 @@ import javafx.scene.text.Text;
 
 public class RegisterPane extends BorderPane {
 
+    private final int PaneWidth = 400;
+    private final int PaneHeight = 600;
+
     private TextArea textArea;
     private VBox vBox;
+    private AccountScene accountScene;
 
-   public RegisterPane(){
+   public RegisterPane(AccountScene accountScene){
         super();
-       setPaneStyle(this);
+        this.accountScene = accountScene;
+        SetPaneStyle(this);
     }
-    private void setPaneStyle(Pane pane) {
+    private void SetPaneStyle(Pane pane) {
         pane.setStyle("-fx-background-radius: 30;" +
-                "-fx-border-radius: 30;" +
-                "-fx-border-width:4;" +
-                "-fx-background-color: #b6b6b6;"+
-                "-fx-border-color: #ff9900;");
+            "-fx-border-radius: 30;" +
+            "-fx-border-width:4;" +
+            "-fx-background-color: #b6b6b6;"+
+            "-fx-border-color: #ff9900;");
 
     }
 }
