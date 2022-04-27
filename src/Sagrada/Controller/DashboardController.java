@@ -18,19 +18,21 @@ public class DashboardController {
         this.player = Player.GetPlayer(1);
 
         System.out.println("Player username:");
-//        System.out.println(this.player.getUsername());
+
+     //   System.out.println(this.player.getUsername());
+
 
         getGames();
     }
 
     public void getGames() {
-
+/*
         this.games = Game.GetPlayerGames(this.player.getUsername());
 
         for (Game g : this.games) {
             System.out.println("Game creation date:");
             System.out.println(g.getCreated());
-        }
+        }*/
 
     }
 
