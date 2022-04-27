@@ -13,14 +13,14 @@ import java.util.ArrayList;
 
 public class AccountScene extends Scene {
     private static final String ImageUrl = "/images/bgLogin.jpg";
-
+    private static final String GeneralStylePath = "/style/accountStyle.css";
 
     private BorderPane root;
     private ArrayList<Pane> panes;
 
     public AccountScene() {
         super(new Pane(), MyApp.width, MyApp.height);
-
+        this.getStylesheets().add(getClass().getResource(GeneralStylePath).toString());
         root = new BorderPane();
         setRoot(root);
         SetPanes();

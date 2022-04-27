@@ -13,7 +13,7 @@ import javafx.scene.control.Button;
 
 public class LoginPane extends BorderPane {
 
-    private static final String imageUrl = "/images/logo.png";
+    private static final String ImageUrl = "/images/logo.png";
     private final int PaneWidth = 400;
     private final int PaneHeight = 600;
     private final int ImageWidth = 200;
@@ -40,7 +40,7 @@ public class LoginPane extends BorderPane {
         SetPaneStyle(this);
         this.accountScene = accountScene;
 
-        image = new Image(getClass().getResource(imageUrl).toString());
+        image = new Image(getClass().getResource(ImageUrl).toString());
         imageView = new ImageView(image);
         imageView.setFitHeight(ImageHeight);
         imageView.setFitWidth(ImageWidth);
@@ -54,10 +54,9 @@ public class LoginPane extends BorderPane {
         submitButton = new Button("Inloggen");
         registerLabel = new Label("Geen account?");
         registerButton = new Button("Registreren");
-
+        SetButtonStyle(submitButton, registerButton);
         submitButton.setOnAction(e -> AccountScene.Login(usernameField.getText().toLowerCase(), passwordField.getText().toLowerCase()));
         registerButton.setOnAction(e -> SwitchPane(1));
-        SetButtonStyle(submitButton, registerButton);
 
         vBox = new VBox(imageView, topText, usernameLabel, usernameField, passwordLabel, passwordField, submitButton, registerLabel, registerButton );
         vBox.setMargin(imageView, new Insets(50, 0, 30, 0));
@@ -68,6 +67,7 @@ public class LoginPane extends BorderPane {
         vBox.setMargin(passwordField, new Insets(0, 0, 30, 0));
         vBox.setMargin(submitButton, new Insets(0, 0, 0, 190));
         vBox.setMargin(registerLabel, new Insets(20, 0, 5, 0));
+
         vBox.setMaxSize(VBoxWidth, VBoxHeight);
         vBox.setAlignment(Pos.TOP_CENTER);
         setCenter(vBox);
@@ -79,39 +79,22 @@ public class LoginPane extends BorderPane {
     }
 
     private void SwitchPane(int i) {
-
         accountScene.SwitchPane(i);
     }
 
     private void SetPaneStyle(Pane pane) {
-        pane.setStyle("-fx-background-radius: 30;" +
-                "-fx-border-radius: 30;" +
-                "-fx-border-width:4;" +
-                "-fx-background-color: #b6b6b6;"+
-                "-fx-border-color: #ff9900;");
+        pane.getStyleClass().add("accountPaneStyle");
 
     }
 
     private void SetTextFieldStyle(Node... nodes) {
         for (Node node : nodes) {
-            node.setStyle("  -fx-width: 100%;\n" +
-                    " -fx-padding: 12px 20px;\n" +
-                    "  -fx-margin: 8px 0;\n" +
-                    "  -fx-box-sizing: border-box;");
+            node.getStyleClass().add("accountTextField");
         }
     }
     private void SetButtonStyle(Node... nodes){
         for (Node node : nodes) {
-            node.setStyle("  -fx-background-color: #ff9900; /* Violet */\n" +
-                    "  -fx-text-fill: #ffffff;\n" +
-                    "-fx-border-width:4;"+
-                    "-fx-background-radius: 10;" +
-                    "  -fx-border-radius: 10;"+
-                    "  -fx-padding: 10px 22px;\n" +
-                    "  -fx-text-align: center;\n" +
-                    "  -fx-text-decoration: none;\n" +
-                    "  -fx-display: inline-block;\n" +
-                    "  -fx-font-size: 16px;");
+            node.getStyleClass().add("accountSceneButton");
         }
     }
 
