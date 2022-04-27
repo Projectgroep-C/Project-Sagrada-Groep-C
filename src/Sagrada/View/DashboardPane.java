@@ -20,7 +20,7 @@ public class DashboardPane extends BorderPane {
 
     private void SetNav(){
         nav = new VBox();
-        nav.setPadding(new Insets(100));
+        nav.setPadding(new Insets(50, 150,0,50));
         nav.setSpacing(50);
         nav.getChildren().addAll(
                 SetNavItem("Players", 1),
@@ -36,7 +36,7 @@ public class DashboardPane extends BorderPane {
         btn.setMinWidth(400);
         Font font = Font.font("Arial", 36);
         btn.setFont(font);
-        btn.setOnAction(e -> dashboard.SwitchPane(paneIndex));
+        btn.setOnAction(e -> dashboard.SwitchPane(paneIndex, name));
         return btn;
     }
 
