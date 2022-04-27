@@ -18,7 +18,7 @@ public class LoginPane extends StackPane {
         super();
 
         Text text = new Text("Hello, you're on the AccountScene");
-
+//dddddd
         Button next = new Button("Go to DashboardScene");
         next.setOnAction(e -> MyApp.switchScene(1));
         vBox = new VBox(text, next);
