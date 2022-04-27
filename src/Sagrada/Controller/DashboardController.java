@@ -18,7 +18,9 @@ public class DashboardController {
         this.player = Player.GetPlayer(1);
 
         System.out.println("Player username:");
+
      //   System.out.println(this.player.getUsername());
+
 
         getGames();
     }

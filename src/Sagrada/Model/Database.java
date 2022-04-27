@@ -14,6 +14,7 @@ public class Database {
             con = DriverManager.getConnection("jdbc:mysql://localhost/","root","Bastiaan");
 
 
+
         }
         catch(Exception e){
             System.out.println(e);

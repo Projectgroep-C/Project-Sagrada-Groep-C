@@ -1,6 +1,8 @@
 package Sagrada.View;
 
-public class PlayersPane {
+import javafx.scene.layout.Pane;
+
+public class PlayersPane extends Pane {
 
     public void sort() {
 
