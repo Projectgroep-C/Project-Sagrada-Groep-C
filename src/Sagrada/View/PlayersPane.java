@@ -65,8 +65,6 @@ public class PlayersPane extends BorderPane {
         return tableText;
     }
 
-
-
     private Button SetTableButton(String btnText){
         Button btn = new Button(btnText);
         btn.setMinWidth(100);
