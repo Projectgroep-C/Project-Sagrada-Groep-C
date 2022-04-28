@@ -15,11 +15,10 @@ public class MyApp extends Application {
     public final static int width = 1440;
     public final static int height = 810;
 
-    private DashboardController dashboardController;
     protected static Stage stage;
+    private DashboardController dashboardController;
 
     public MyApp() {
-
 //        this.dashboardController = new DashboardController();
 //        Account a = Account.GetAccount("Lars");
     }

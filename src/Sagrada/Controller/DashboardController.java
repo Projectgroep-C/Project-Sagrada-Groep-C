@@ -3,6 +3,7 @@ package Sagrada.Controller;
 import Sagrada.Model.Game;
 import Sagrada.Model.Player;
 
+import java.sql.Timestamp;
 import java.util.ArrayList;
 
 public class DashboardController {
@@ -25,7 +26,7 @@ public class DashboardController {
     }
 
     public void createGame() {
-        Game newGame = new Game();
+        Game.CreateGame();
     }
 
     public void getChallenges() {
