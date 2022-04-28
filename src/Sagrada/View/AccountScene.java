@@ -1,7 +1,7 @@
 package Sagrada.View;
 
 import Sagrada.Controller.AccountController;
-import Sagrada.Controller.MyApp;
+import Sagrada.Controller.Main;
 import javafx.scene.Scene;
 import javafx.scene.image.Image;
 import javafx.scene.layout.*;
@@ -16,7 +16,7 @@ public class AccountScene extends Scene {
     private ArrayList<Pane> panes;
 
     public AccountScene() {
-        super(new Pane(), MyApp.width, MyApp.height);
+        super(new Pane(), Main.width, Main.height);
         this.getStylesheets().add(getClass().getResource(GeneralStylePath).toString());
         root = new BorderPane();
         setRoot(root);
@@ -41,6 +41,7 @@ public class AccountScene extends Scene {
     public void SwitchPane(int selectedScene){
         root.setCenter(panes.get(selectedScene));
     }
+
     public void CreateAccount(String username, String password) {
 
     }
@@ -50,7 +51,7 @@ public class AccountScene extends Scene {
 
         boolean succesRate = accountController.LoginAccount(username, password);
         if (succesRate){
-            MyApp.SwitchScene(1);
+            Main.SwitchScene(1);
         }
 
     }

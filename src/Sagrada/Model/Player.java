@@ -1,9 +1,11 @@
 package Sagrada.Model;
 
+import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.sql.SQLException;
 
-public class Player extends Database {
+public class Player {
 
     private int id;
     private String username;
@@ -93,14 +95,15 @@ public class Player extends Database {
 
     public static Player GetPlayer(int playerId) {
         try {
-
+            Connection con = Database.CreateConnection();
             PreparedStatement ps = con.prepareStatement("select * from player where idplayer = ?");
             ps.setInt(1, playerId);
             ResultSet rs = ps.executeQuery();
 
             rs.next();
-            return new Player(rs.getInt(1), rs.getString(2), rs.getInt(3), PlayStatus.valueOf(rs.getString(4)), rs.getInt(5), rs.getString(6), rs.getInt(7), rs.getInt(8));
-
+            Player p = new Player(rs.getInt(1), rs.getString(2), rs.getInt(3), PlayStatus.valueOf(rs.getString(4)), rs.getInt(5), rs.getString(6), rs.getInt(7), rs.getInt(8));
+            con.close();
+            return p;
         }
         catch (Exception e) {
             System.out.println(e);

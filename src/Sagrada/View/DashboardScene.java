@@ -1,6 +1,6 @@
 package Sagrada.View;
 
-import Sagrada.Controller.MyApp;
+import Sagrada.Controller.Main;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.layout.BorderPane;
@@ -15,7 +15,7 @@ public class DashboardScene extends Scene {
     private ArrayList<Pane> panes;
 
     public DashboardScene() {
-        super(new Pane(), MyApp.width, MyApp.height);
+        super(new Pane(), Main.width, Main.height);
         root = new BorderPane();
         setRoot(root);
         SetPanes();
