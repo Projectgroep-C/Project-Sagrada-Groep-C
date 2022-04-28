@@ -61,8 +61,6 @@ public class DashboardScene extends Scene {
     }
 
     public ArrayList<Account> getAcounts(ArrayList<Account> accounts) {
-        //ArrayList<Player> players = new ArrayList<Player>();
-
         //todo delete
         Account p1 = new Account();
         p1.TestSetUsername("Punpun");
@@ -70,9 +68,23 @@ public class DashboardScene extends Scene {
         Account p2 = new Account();
         p2.TestSetUsername("Aiko");
         accounts.add(p2);
+        Account p3 = new Account();
+        p3.TestSetUsername("Jhon");
+        accounts.add(p3);
+        Account p4 = new Account();
+        p4.TestSetUsername("Joseph");
+        accounts.add(p4);
+        Account p5 = new Account();
+        p5.TestSetUsername("Deku");
+        accounts.add(p5);
+        int i = 0;
+        while (30 > i){
+            Account p6 = new Account();
+            p6.TestSetUsername("Deku" + i);
+            accounts.add(p6);
+            i++;
+        }
         //todo delete
-        //players = new ArrayList<Player>();
-
         return accounts;
     }
 

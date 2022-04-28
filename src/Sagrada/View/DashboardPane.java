@@ -20,7 +20,7 @@ public class DashboardPane extends BorderPane {
 
     private void SetNav(){
         nav = new VBox();
-        nav.setPadding(new Insets(50, 150,0,50));
+        nav.setPadding(new Insets(70, 0,0,50));
         nav.setSpacing(50);
         nav.getChildren().addAll(
                 SetNavItem("Players", 1),
