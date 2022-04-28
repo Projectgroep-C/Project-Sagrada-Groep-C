@@ -7,33 +7,21 @@ import java.util.ArrayList;
 
 public class DashboardController {
 
-    private MyApp myApp;
-    private Player player;
     private ArrayList<Game> games;
 
-    public DashboardController(MyApp myApp) {
-        this.myApp = myApp;
-        this.player = new Player();
+    public DashboardController() {
 
-        this.player = Player.GetPlayer(1);
+        Player p = Player.GetPlayer(1);
 
         System.out.println("Player username:");
 
-     //   System.out.println(this.player.getUsername());
+        System.out.println(p.getUsername());
 
-
-        getGames();
+//        getGames();
     }
 
-    public void getGames() {
-/*
-        this.games = Game.GetPlayerGames(this.player.getUsername());
-
-        for (Game g : this.games) {
-            System.out.println("Game creation date:");
-            System.out.println(g.getCreated());
-        }*/
-
+    public void getGames(String username) {
+        this.games = Game.GetPlayerGames(username);
     }
 
     public void createGame() {

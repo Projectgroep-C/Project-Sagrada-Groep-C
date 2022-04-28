@@ -1,5 +1,6 @@
 package Sagrada.Controller;
 
+import Sagrada.Model.Account;
 import Sagrada.View.AccountScene;
 import Sagrada.View.DashboardScene;
 import Sagrada.View.GameOverScene;
@@ -18,8 +19,9 @@ public class MyApp extends Application {
     protected static Stage stage;
 
     public MyApp() {
-        //this.dashboardController = new DashboardController(this);
 
+//        this.dashboardController = new DashboardController();
+//        Account a = Account.GetAccount("Lars");
     }
 
     public void main(String[] args) throws Exception {
@@ -32,7 +34,7 @@ public class MyApp extends Application {
         Text text = new Text(10, 40, "Hello Sagrada!");
         text.setFont(new Font(40));
 
-        switchScene(0);
+        SwitchScene(0);
 
         stage.setTitle("Welcome to Sagrada!");
         stage.setFullScreen(false);
@@ -40,7 +42,7 @@ public class MyApp extends Application {
         stage.show();
     }
 
-    public static void switchScene(int selectedScene) {
+    public static void SwitchScene(int selectedScene) {
         //Temporarily return of String, actual code will come.
         switch (selectedScene) {
             case 0:

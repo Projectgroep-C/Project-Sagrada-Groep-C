@@ -23,7 +23,7 @@ public class ResultPane extends StackPane {
     public ResultPane() {
         super();
         button = new Button("Return to GameScene!");
-        button.setOnAction(e -> MyApp.switchScene(2));
+        button.setOnAction(e -> MyApp.SwitchScene(2));
         button.setFont(new Font(20));
         button.setWrapText(true);
 

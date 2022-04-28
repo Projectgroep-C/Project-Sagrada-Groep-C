@@ -28,12 +28,12 @@ public class GameScene extends Scene {
 
         Text text = new Text("Hello, you're on the GameScene");
         Button next = new Button("Go to GameOverScene");
-        next.setOnAction(e -> MyApp.switchScene(3));
+        next.setOnAction(e -> MyApp.SwitchScene(3));
         next.setLayoutX(250);
         next.setLayoutY(220);
 
         Button goback = new Button("Go back to DashboardScene");
-        goback.setOnAction(e -> MyApp.switchScene(1));
+        goback.setOnAction(e -> MyApp.SwitchScene(1));
 
         Pane pane = new Pane();
         pane.getChildren().add(text);

@@ -2,13 +2,10 @@ package Sagrada.View;
 
 import Sagrada.Controller.AccountController;
 import Sagrada.Controller.MyApp;
-import com.sun.org.apache.xpath.internal.operations.Bool;
 import javafx.scene.Scene;
 import javafx.scene.image.Image;
-import javafx.scene.image.ImageView;
 import javafx.scene.layout.*;
 
-import java.io.FileNotFoundException;
 import java.util.ArrayList;
 
 public class AccountScene extends Scene {
@@ -53,7 +50,7 @@ public class AccountScene extends Scene {
 
         boolean succesRate = accountController.LoginAccount(username, password);
         if (succesRate){
-            MyApp.switchScene(1);
+            MyApp.SwitchScene(1);
         }
 
     }

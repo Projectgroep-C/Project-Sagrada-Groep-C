@@ -16,10 +16,10 @@ public class PlayerBoardPane extends StackPane {
 
         Text text = new Text("Hello, you're on the GameScene");
         Button next = new Button("Go to GameOverScene");
-        next.setOnAction(e -> MyApp.switchScene(3));
+        next.setOnAction(e -> MyApp.SwitchScene(3));
 
         Button goback = new Button("Go back to DashboardScene");
-        goback.setOnAction(e -> MyApp.switchScene(1));
+        goback.setOnAction(e -> MyApp.SwitchScene(1));
 
         vBox = new VBox(text, next, goback);
         vBox.setPadding(new Insets(15));

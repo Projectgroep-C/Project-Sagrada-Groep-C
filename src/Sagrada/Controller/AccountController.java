@@ -11,6 +11,8 @@ public class AccountController {
     }
 
     public boolean LoginAccount(String username, String password){
+//        Player p = Player.GetPlayer(1);
+//        Account a = Account.GetAccount("Lars");
         /*this.account = new Account();
         this.account = Account.getAccount(username);
         if (this.account.getPassword() == password){

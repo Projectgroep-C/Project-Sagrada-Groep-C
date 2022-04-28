@@ -19,7 +19,7 @@ public class GameOverScene extends Scene {
 
         Text text = new Text("Hello, you're on the GameOverScene");
         Button goback = new Button("Go back to GameScene");
-        goback.setOnAction(e -> MyApp.switchScene(2));
+        goback.setOnAction(e -> MyApp.SwitchScene(2));
 
         Pane pane = new Pane();
         pane.getChildren().add(text);

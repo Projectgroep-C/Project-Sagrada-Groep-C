@@ -9,12 +9,8 @@ public class Database {
 
     public Database() {
         try {
-
             Class.forName("com.mysql.cj.jdbc.Driver");
-            con = DriverManager.getConnection("jdbc:mysql://localhost/","root","Bastiaan");
-
-
-
+            con = DriverManager.getConnection("jdbc:mysql://localhost:3306/2021_sagrada","root","root");
         }
         catch(Exception e){
             System.out.println(e);
