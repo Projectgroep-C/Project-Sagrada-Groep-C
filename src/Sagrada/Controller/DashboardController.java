@@ -13,16 +13,16 @@ public class DashboardController {
         players.add(new Player());
     }
 
-    public ArrayList<Game> GetGames(String username) {
-        return Game.GetPlayerGames(username);
+    public ArrayList<Game> GetGames() {
+        return Game.GetPlayerGames(this.players.get(1));
     }
 
     public boolean CreateGame() {
         return Game.CreateGame();
     }
 
-    public void GetChallenges() {
-
+    public ArrayList<Player> GetChallenges() {
+        return Player.GetChallenges(this.players.get(1));
     }
 
     public void EditChallenges(Boolean reaction) {

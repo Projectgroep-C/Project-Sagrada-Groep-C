@@ -52,14 +52,14 @@ public class Game {
         return created;
     }
 
-    public static ArrayList<Game> GetPlayerGames(String username) {
+    public static ArrayList<Game> GetPlayerGames(Player player) {
 
         ArrayList<Game> games = new ArrayList<>();
 
         try {
             Connection con = Database.CreateConnection();
             PreparedStatement ps = con.prepareStatement("select * from game inner join player on game.idgame = player.idgame where player.username = ?");
-            ps.setString(1, username);
+            ps.setString(1, player.getUsername());
             ResultSet rs = ps.executeQuery();
 
             while(rs.next()) games.add( new Game( rs.getInt(1), rs.getInt(2), rs.getInt(3), Timestamp.valueOf(rs.getString(4)) ) );
