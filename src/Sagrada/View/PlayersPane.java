@@ -53,8 +53,6 @@ public class PlayersPane extends BorderPane {
         playerTableRow = new HBox();
         playerTableRow.getChildren().add(SetTableText(account.getUsername()));
         playerTableRow.getChildren().add(SetTableButton("Challenge"));
-        playerTableRow.setSpacing(0);
-        playerTableRow.setPadding(new Insets(0, 0,20,0));
         return playerTableRow;
     }
 

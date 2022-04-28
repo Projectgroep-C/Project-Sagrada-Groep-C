@@ -4,7 +4,6 @@ import Sagrada.Model.Game;
 import javafx.geometry.Insets;
 import javafx.scene.control.Button;
 import javafx.scene.control.ScrollPane;
-import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 import javafx.scene.text.Font;
@@ -12,7 +11,7 @@ import javafx.scene.text.Text;
 
 import java.util.ArrayList;
 
-public class GameListPane extends BorderPane {
+public class GameListPane extends VBox {
     private DashboardScene dashboard;
     private ScrollPane root;
     private ArrayList<Game> games;
@@ -22,10 +21,7 @@ public class GameListPane extends BorderPane {
 
     GameListPane(DashboardScene dashboard){
         this.dashboard = dashboard;
-        VBox f = new VBox();
-        f.getChildren().addAll(setGamesTableTopRow(), setContend());
-        //setTop(setGamesTableTopRow());
-        setCenter(f);
+        getChildren().addAll(setGamesTableTopRow(), setContend());
     }
 
     private ScrollPane setContend(){
