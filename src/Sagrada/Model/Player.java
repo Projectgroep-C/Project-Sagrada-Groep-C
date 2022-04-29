@@ -1,9 +1,9 @@
 package Sagrada.Model;
 
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
+import java.sql.*;
+import java.util.ArrayList;
 
-public class Player extends Database {
+public class Player {
 
     private int id;
     private String username;
@@ -91,21 +91,42 @@ public class Player extends Database {
         this.score = score;
     }
 
-    public static Player GetPlayer(int playerId) {
+    public static Player GetPlayer(Player player) {
         try {
-
+            Connection con = Database.CreateConnection();
             PreparedStatement ps = con.prepareStatement("select * from player where idplayer = ?");
-            ps.setInt(1, playerId);
+            ps.setInt(1, player.getId());
             ResultSet rs = ps.executeQuery();
 
             rs.next();
-            return new Player(rs.getInt(1), rs.getString(2), rs.getInt(3), PlayStatus.valueOf(rs.getString(4)), rs.getInt(5), rs.getString(6), rs.getInt(7), rs.getInt(8));
-
+            Player p = new Player(rs.getInt(1), rs.getString(2), rs.getInt(3), PlayStatus.valueOf(rs.getString(4)), rs.getInt(5), rs.getString(6), rs.getInt(7), rs.getInt(8));
+            con.close();
+            return p;
         }
         catch (Exception e) {
             System.out.println(e);
         }
 
         return null;
+    }
+
+    public static ArrayList<Player> GetChallenges(Player player) {
+
+        ArrayList<Player> games = new ArrayList<>();
+
+        try {
+            Connection con = Database.CreateConnection();
+            PreparedStatement ps = con.prepareStatement("select * from player where idplayer = ? and where playStatus = 'challengee'");
+            ps.setString(1, player.getUsername());
+            ResultSet rs = ps.executeQuery();
+
+            while(rs.next()) games.add( new Player( rs.getInt(1), rs.getString(2), rs.getInt(3), PlayStatus.valueOf(rs.getString(4)), rs.getInt(5), rs.getString(6), rs.getInt(7), rs.getInt(8) ) );
+            con.close();
+        }
+        catch (Exception e) {
+            System.out.println(e);
+        }
+
+        return games;
     }
 }

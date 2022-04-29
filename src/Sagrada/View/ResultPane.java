@@ -1,6 +1,6 @@
 package Sagrada.View;
 
-import Sagrada.Controller.MyApp;
+import Sagrada.Controller.Main;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
 import javafx.scene.control.Button;
@@ -23,7 +23,7 @@ public class ResultPane extends StackPane {
     public ResultPane() {
         super();
         button = new Button("Return to GameScene!");
-        button.setOnAction(e -> MyApp.switchScene(2));
+        button.setOnAction(e -> Main.SwitchScene(2));
         button.setFont(new Font(20));
         button.setWrapText(true);
 
@@ -49,7 +49,7 @@ public class ResultPane extends StackPane {
         setAlignment(vBox, Pos.CENTER);
         getChildren().add(informationPane);
         setPadding(new Insets(100));
-        setPrefSize(MyApp.width, MyApp.height);
+        setPrefSize(Main.width, Main.height);
         setBackground(background);
     }
 

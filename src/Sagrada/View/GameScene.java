@@ -1,6 +1,6 @@
 package Sagrada.View;
 
-import Sagrada.Controller.MyApp;
+import Sagrada.Controller.Main;
 import Sagrada.Model.*;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
@@ -22,18 +22,18 @@ public class GameScene extends Scene {
     private PlayerBoardPane playerBoardPane;
 
     public GameScene() {
-        super(new Pane(), MyApp.width, MyApp.height);
+        super(new Pane(), Main.width, Main.height);
         this.playerBoardPane = new PlayerBoardPane();
         setRoot(this.playerBoardPane);
 
         Text text = new Text("Hello, you're on the GameScene");
         Button next = new Button("Go to GameOverScene");
-        next.setOnAction(e -> MyApp.switchScene(3));
+        next.setOnAction(e -> Main.SwitchScene(3));
         next.setLayoutX(250);
         next.setLayoutY(220);
 
         Button goback = new Button("Go back to DashboardScene");
-        goback.setOnAction(e -> MyApp.switchScene(1));
+        goback.setOnAction(e -> Main.SwitchScene(1));
 
         Pane pane = new Pane();
         pane.getChildren().add(text);

@@ -5,13 +5,9 @@ import Sagrada.Model.PlayerFrameField;
 
 public class GameController {
 
-    private MyApp myApp;
-    private Player player;
     private PlayerFrameField playerFrameField;
 
-    public GameController(MyApp myApp, Player player) {
-        this.myApp = myApp;
-        this.player = player;
+    public GameController() {
         this.playerFrameField = new PlayerFrameField();
 
         // When done

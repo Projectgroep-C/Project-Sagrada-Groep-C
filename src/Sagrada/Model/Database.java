@@ -5,29 +5,20 @@ import java.sql.DriverManager;
 
 public class Database {
 
-    protected static Connection con;
-
     public Database() {
-        try {
 
-            Class.forName("com.mysql.cj.jdbc.Driver");
-            con = DriverManager.getConnection("jdbc:mysql://localhost/","root","Bastiaan");
-
-
-
-        }
-        catch(Exception e){
-            System.out.println(e);
-        }
     }
 
-    public void CloseConnection() {
+    public static Connection CreateConnection() {
         try {
-            con.close();
+            Class.forName("com.mysql.cj.jdbc.Driver");
+            return DriverManager.getConnection("jdbc:mysql://localhost:3306/2021_sagrada","root","root");
         }
         catch(Exception e){
             System.out.println(e);
         }
+
+        return null;
     }
 
 }

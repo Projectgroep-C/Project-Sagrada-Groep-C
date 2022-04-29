@@ -1,6 +1,5 @@
 package Sagrada.View;
 
-import Sagrada.Controller.MyApp;
 import javafx.geometry.Insets;
 import javafx.scene.control.Button;
 import javafx.scene.layout.BorderPane;
